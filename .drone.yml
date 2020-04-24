@@ -8,7 +8,7 @@ steps:
       branch:
         - master
     commands:
-      - "apt -y update && apt -y install git curl"
+      - "apt -y update && apt -y install git curl default-jdk"
       - "export GH_TOKEN"
       - "export FLURRY_KEY"
       - "export GH_TOKEN"
