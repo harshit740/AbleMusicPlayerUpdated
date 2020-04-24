@@ -7,6 +7,7 @@ if [ -d app/build/outputs/apk/release ]; then
             -F "disable_web_page_preview=true" \
             -F "parse_mode=Markdown" \
             -F caption="$1"
-          rm -rf app/build/outputs/apk
+	  cd ..
+	  rm -rf app/build/outputs/apk
 	fi
 fi
