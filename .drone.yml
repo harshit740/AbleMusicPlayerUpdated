@@ -3,12 +3,12 @@ name: default
 
 steps:
   - name: Construction
-    image: "ubuntu:19.10"
+    image: cirrusci/android-sdk
     trigger:
       branch:
         - master
     commands:
-      - "apt -y update && apt -y install git curl default-jdk"
+      - "apt -y update && apt -y install git curl"
       - "export GH_TOKEN"
       - "export FLURRY_KEY"
       - "export GH_TOKEN"
