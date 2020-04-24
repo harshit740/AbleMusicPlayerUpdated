@@ -1,11 +1,10 @@
 kind: pipeline
 name: default
 
-image: "ubuntu:19.10"
-name: Ubuntu
-
 steps:
-  - commands:
+  - name: Construction
+    image: "ubuntu:19.10"
+    commands:
       - "export GH_TOKEN"
       - "export FLURRY_KEY"
       - "export GH_TOKEN"
