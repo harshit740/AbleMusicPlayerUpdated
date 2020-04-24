@@ -4,7 +4,11 @@ name: default
 steps:
   - name: Construction
     image: "ubuntu:19.10"
+    trigger:
+      branch:
+        - master
     commands:
+      - "apt -y update && apt -y install git curl"
       - "export GH_TOKEN"
       - "export FLURRY_KEY"
       - "export GH_TOKEN"
@@ -13,6 +17,7 @@ steps:
       - "export RAPID_KEY"
       - "export STORE_PASS"
       - "export TG_BOT_KEY"
+      - "cd /drone/src"
       - "bash build.sh"
     environment:
       FLURRY_KEY:
