@@ -4,7 +4,7 @@ name: default
 steps:
   - name: Construction
     pull: if-not-exists
-    image: cirrusci/android-sdk
+    image: thyrlian/AndroidSDK
     trigger:
       branch:
         - master
