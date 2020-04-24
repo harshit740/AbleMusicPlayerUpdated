@@ -3,6 +3,7 @@ name: default
 
 steps:
   - name: Construction
+    pull: if-not-exists
     image: cirrusci/android-sdk
     trigger:
       branch:
